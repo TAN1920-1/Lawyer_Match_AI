@@ -3,6 +3,7 @@
 .env.local
 *.env.local
 .env.*.local
+.env.vercel
 adv/db_con/config.local.php
 
 # ---- macOS resource-fork junk (from zip extraction) ----
