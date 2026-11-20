@@ -1,0 +1,19 @@
+# ---- Secrets: NEVER commit these ----
+.env
+.env.local
+*.env.local
+.env.*.local
+adv/db_con/config.local.php
+
+# ---- macOS resource-fork junk (from zip extraction) ----
+._*
+.DS_Store
+
+# ---- Logs / temp ----
+*.log
+php_errors.log
+tmp/
+
+# ---- Editors ----
+.vscode/
+.idea/

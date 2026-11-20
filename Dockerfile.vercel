@@ -1,0 +1,15 @@
+FROM dunglas/frankenphp:1-php8.4-alpine
+
+# The application talks to TiDB (MySQL protocol) over TLS using mysqli.
+RUN install-php-extensions mysqli
+
+WORKDIR /app
+
+COPY Caddyfile /etc/caddy/Caddyfile
+
+# The app lives under /adv so every relative include and link keeps working.
+COPY adv /app/public/adv
+
+ENV PORT=80
+
+CMD ["frankenphp", "run", "--config", "/etc/caddy/Caddyfile"]

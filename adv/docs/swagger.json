@@ -1,0 +1,76 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Law Firm Module API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/firm/lawyers": {
+      "post": {
+        "summary": "Add a new lawyer to the firm",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "full_name": { "type": "string" },
+                  "email": { "type": "string" },
+                  "bar_registration_number": { "type": "string" },
+                  "phone": { "type": "string" },
+                  "practice_areas": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Lawyer added successfully" }
+        }
+      },
+      "delete": {
+        "summary": "Soft-delete a lawyer from the firm",
+        "parameters": [
+          { "name": "lawyerId", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Lawyer removed successfully" }
+        }
+      }
+    },
+    "/api/firm/bookings": {
+      "get": {
+        "summary": "List all bookings for firm lawyers",
+        "responses": {
+          "200": { "description": "List of bookings" }
+        }
+      }
+    },
+    "/api/firm/bookings/{bookingId}/reassign": {
+      "patch": {
+        "summary": "Reassign a booking to another firm lawyer",
+        "parameters": [
+          { "name": "bookingId", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "new_lawyer_id": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Booking reassigned" }
+        }
+      }
+    }
+  }
+}

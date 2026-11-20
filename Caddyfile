@@ -1,0 +1,6 @@
+:{$PORT:80} {
+	root * /app/public
+	encode zstd gzip
+	redir / /adv/ 302
+	php_server
+}

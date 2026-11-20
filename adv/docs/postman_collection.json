@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "law-firm-module",
+		"name": "Law Firm Module API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Lawyer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"full_name\": \"John Doe\",\n    \"email\": \"john@example.com\",\n    \"bar_registration_number\": \"BAR123\",\n    \"phone\": \"1234567890\",\n    \"practice_areas\": \"Criminal Law\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/firm/lawyers.php",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"firm",
+						"lawyers.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Lawyer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/firm/lawyers.php/Lawyer123",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"firm",
+						"lawyers.php",
+						"Lawyer123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Firm Bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/firm/bookings.php",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"firm",
+						"bookings.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reassign Booking",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"new_lawyer_id\": \"Lawyer456\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/firm/bookings.php/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"firm",
+						"bookings.php",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost/adv",
+			"type": "string"
+		}
+	]
+}
