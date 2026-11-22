@@ -331,13 +331,13 @@ setInterval(nextSlide, 4000);
 
 							<div class="mt-4">
 								<h5>Contact Us</h5>
-								<p class="mb-1"><i class="fas fa-map-marker-alt mr-2"></i>MultiAstra Techs, Nashik</p>
+								<p class="mb-1"><i class="fas fa-map-marker-alt mr-2"></i>Lawyer Match AI, Pune</p>
 								<p><i class="fas fa-envelope mr-2"></i>lawyermatch.ai@gmail.com</p>
-								<h6 class="mt-3">Developers</h6>
-								<p class="mb-1">1) Jeet A. Kumar</p>
+								<!-- <h6 class="mt-3">Developers</h6> -->
+								<!-- <p class="mb-1">1) Jeet A. Kumar</p>
 								<p class="mb-1">2) Spandan S. Pathade</p>
 								<p class="mb-1">3) Sarvesh V. Pendole</p>
-								<p class="mb-3">4) Tanishq K. Rikame</p>
+								<p class="mb-3">4) Tanishq K. Rikame</p> -->
 								<a href="developers.php" class="btn btn-outline-primary btn-sm rounded-pill px-4">
 									<i class="fas fa-info-circle mr-2"></i>Know More About Us
 								</a>
@@ -347,7 +347,7 @@ setInterval(nextSlide, 4000);
 					<div class="col-lg-6">
 						<!-- Placeholder for map or image -->
 						<div class="glass-panel p-2" style="height: 400px; border-radius: 20px; overflow: hidden;">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3626.8452032365417!2d73.82226139999999!3d20.013591400000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddebab15555555%3A0xdb01367e9d5cf969!2sK.K%20Wagh%20Institute%20Of%20Engineering%20Education%20and%20Research!5e1!3m2!1sen!2sin!4v1772046200158!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<iframe src="https://maps.app.goo.gl/nwczsTkxSevMBETdA" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</div>
 				</div>
