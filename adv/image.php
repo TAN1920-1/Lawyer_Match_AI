@@ -44,4 +44,15 @@ if (is_file($path)) {
     exit;
 }
 
+// Final fallback: show the shared placeholder so no image ever renders broken.
+$placeholder = __DIR__ . '/images/random.png';
+if (is_file($placeholder)) {
+    $mime = function_exists('mime_content_type') ? @mime_content_type($placeholder) : '';
+    header('Content-Type: ' . ($mime ? $mime : 'image/png'));
+    header('Cache-Control: public, max-age=86400');
+    header('Content-Length: ' . filesize($placeholder));
+    readfile($placeholder);
+    exit;
+}
+
 http_response_code(404);

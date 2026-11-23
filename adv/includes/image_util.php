@@ -68,7 +68,7 @@ function db_store_uploaded_image($tmpPath, $filename, $fallbackMime = 'applicati
  * @param string $fallback relative path used when no image is present
  * @return string
  */
-function img_src($img, $fallback = 'images/actors/close-up-lawyer-signing-papers.jpg')
+function img_src($img, $fallback = 'images/random.png')
 {
     $img = trim((string) $img);
     if ($img === '') {
