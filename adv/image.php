@@ -22,6 +22,8 @@ $stmt = @mysqli_prepare($con, "SELECT mime_type, image_data FROM uploaded_images
 if ($stmt) {
     mysqli_stmt_bind_param($stmt, 's', $name);
     mysqli_stmt_execute($stmt);
+    $mime = '';
+    $data = '';
     mysqli_stmt_bind_result($stmt, $mime, $data);
     if (mysqli_stmt_fetch($stmt)) {
         mysqli_stmt_close($stmt);
