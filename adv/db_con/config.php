@@ -26,10 +26,13 @@ if ($baseUrl === '' && $provider === 'openrouter') {
     $baseUrl = 'https://openrouter.ai/api/v1/chat/completions';
 }
 if ($baseUrl === '' && $provider === 'google') {
-    $baseUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+    $baseUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
 }
 if ($model === '' && $provider === 'openrouter') {
     $model = 'openrouter/auto';
+}
+if ($model === '' && $provider === 'google') {
+    $model = 'gemini-2.5-flash';
 }
 if ($header === '' && $provider === 'openrouter') {
     $header = 'Authorization';

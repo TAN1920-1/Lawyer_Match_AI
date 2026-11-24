@@ -150,7 +150,7 @@
 
 					<!-- <button type="submit" class="btn btn-modern btn-block mt-4" name="login">Login</button> -->
 					<div class="text-center mt-3">
-						<a href="#" class="text-muted small">Forgot Password?</a>
+						<a href="forgot_password.php" class="text-muted small">Forgot Password?</a>
 					</div>
 				</form>
 				<div class="text-center mt-4">
