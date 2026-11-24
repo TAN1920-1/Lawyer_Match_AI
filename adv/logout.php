@@ -1,4 +1,3 @@
-
 <?php
 //logout
 include_once 'includes/session_init.php';

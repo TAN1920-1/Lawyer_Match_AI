@@ -1,4 +1,3 @@
-
 <?php
 	include_once 'includes/session_init.php';
 	include_once 'db_con/dbCon.php';
