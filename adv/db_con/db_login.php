@@ -30,7 +30,12 @@
                     header('location:../login.php?error');
                 }
 			} else {
-				header('location:../login.php?error');
+				$pend = mysqli_query($con, "SELECT status FROM user WHERE email = '" . $email . "' and (role='Lawyer' or role='FIRM_LAWYER') LIMIT 1");
+				if ($pend && ($p = mysqli_fetch_array($pend)) && $p['status'] !== 'Active') {
+					header('location:../login.php?pending=lawyer');
+				} else {
+					header('location:../login.php?error');
+				}
 			}
 		} else if($role === 'User'){
 			$result2 = mysqli_query($con, "SELECT * FROM user INNER JOIN client on user.u_id=client.client_id WHERE user.email = '" . $email. "' and user.role='User' and user.status='Active' and user.is_active=1");
@@ -50,7 +55,12 @@
                     header('location:../login.php?error');
                 }
 			} else {
-				header('location:../login.php?error');
+				$pend = mysqli_query($con, "SELECT status FROM user WHERE email = '" . $email . "' and role='User' LIMIT 1");
+				if ($pend && ($p = mysqli_fetch_array($pend)) && $p['status'] !== 'Active') {
+					header('location:../login.php?pending=user');
+				} else {
+					header('location:../login.php?error');
+				}
 			}
 		} else if($role === 'Admin'){
 			$result3 = mysqli_query($con,"SELECT * FROM user INNER JOIN administrator on user.u_id=administrator.administrator_id where user.email = '" . $email. "' and user.role='Admin' and user.is_active=1");

@@ -89,6 +89,26 @@
 							</button>
 						</div>";
 					}
+					else if(isset($_GET['pending']) && $_GET['pending']=='lawyer')
+					{
+						echo "
+						<div class='alert alert-info alert-dismissible fade show' role='alert'>
+							<i class='fas fa-info-circle mr-2'></i>Your lawyer account is pending admin approval. You will receive an approval email shortly, then you can log in with the password sent to you.
+							<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+								<span aria-hidden='true'>&times;</span>
+							</button>
+						</div>";
+					}
+					else if(isset($_GET['pending']) && $_GET['pending']=='user')
+					{
+						echo "
+						<div class='alert alert-info alert-dismissible fade show' role='alert'>
+							<i class='fas fa-info-circle mr-2'></i>Your account is pending admin approval. Please try again after approval.
+							<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+								<span aria-hidden='true'>&times;</span>
+							</button>
+						</div>";
+					}
 					else if(isset($_GET['firm_created']))
 					{
 						echo "
