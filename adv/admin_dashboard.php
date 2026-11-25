@@ -22,9 +22,12 @@
 			<title>Admin Dashboard - Lawyer Match AI</title>
 			<style>
 				body {
-					background-color: var(--bg-color);
+					background-color: #0a0a0a;
+					color: #e6e6e6;
 					font-family: 'Inter', sans-serif;
 				}
+				h2, h4 { color: #f5f5f5; }
+				.text-muted { color: #a3a3a3 !important; }
 				#wrapper {
 					overflow-x: hidden;
 				}
@@ -35,16 +38,16 @@
 					-moz-transition: margin .25s ease-out;
 					-o-transition: margin .25s ease-out;
 					transition: margin .25s ease-out;
-					background: white;
-					border-right: 1px solid rgba(0,0,0,0.05);
-					box-shadow: var(--shadow-sm);
+					background: rgba(12, 12, 14, 0.95);
+					border-right: 1px solid rgba(255,255,255,0.08);
+					box-shadow: 4px 0 20px rgba(0,0,0,0.5);
 				}
 				#sidebar-wrapper .sidebar-heading {
 					padding: 1.5rem 1.25rem;
 					font-size: 1.2rem;
 					font-weight: bold;
-					color: var(--primary-color);
-					border-bottom: 1px solid rgba(0,0,0,0.05);
+					color: #64b5ff;
+					border-bottom: 1px solid rgba(255,255,255,0.08);
 				}
 				#sidebar-wrapper .list-group {
 					width: 15rem;
@@ -71,30 +74,52 @@
 					border: none;
 					padding: 15px 20px;
 					font-weight: 500;
-					color: #666;
+					color: #c7c7c7 !important;
+					background: transparent !important;
 					transition: all 0.3s;
 				}
 				.list-group-item:hover {
-					background-color: var(--bg-color);
-					color: var(--primary-color);
+					background-color: rgba(100,181,255,0.08) !important;
+					color: #64b5ff !important;
 					padding-left: 25px;
 				}
-				.list-group-item.active {
-					background-color: var(--primary-color);
-					color: white;
+				.list-group-item.active,
+				.list-group-item.active-modern {
+					background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+					color: white !important;
 				}
 				.dashboard-card {
-					background: white;
+					background: rgba(20, 20, 24, 0.85);
+					border: 1px solid rgba(255,255,255,0.08);
 					border-radius: 15px;
 					padding: 25px;
-					box-shadow: var(--shadow-sm);
+					box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 					height: 100%;
 					transition: transform 0.3s;
+					backdrop-filter: blur(10px);
 				}
 				.dashboard-card:hover {
 					transform: translateY(-5px);
-					box-shadow: var(--shadow-md);
+					box-shadow: 0 12px 40px rgba(0,0,0,0.7), 0 0 20px rgba(100,181,255,0.15);
 				}
+				.dashboard-card .bg-light {
+					background: rgba(255,255,255,0.08) !important;
+				}
+				.btn-outline-primary,
+				.btn-outline-success,
+				.btn-outline-warning {
+					border-color: rgba(100,181,255,0.4);
+					color: #64b5ff;
+				}
+				.btn-outline-success { color: #4ade80; border-color: rgba(74,222,128,0.4); }
+				.btn-outline-warning { color: #fbbf24; border-color: rgba(251,191,36,0.4); }
+				.btn-outline-primary:hover { background: rgba(100,181,255,0.15); color: #64b5ff; }
+				.btn-outline-success:hover { background: rgba(74,222,128,0.15); color: #4ade80; }
+				.btn-outline-warning:hover { background: rgba(251,191,36,0.15); color: #fbbf24; }
+				.table { color: #d4d4d4; }
+				.table-hover tbody tr:hover { background: rgba(255,255,255,0.04); }
+				.thead-light th { background: rgba(255,255,255,0.06) !important; color: #e5e7eb !important; border-color: rgba(255,255,255,0.08) !important; }
+				.table td, .table th { border-color: rgba(255,255,255,0.08); }
 				.chart-container {
 					width: 100%;
 					height: 300px;

@@ -16,6 +16,42 @@ $firm_id = $_SESSION['firm_id'];
     <link rel="stylesheet" href="css/modern_style.css">
     <title>Firm Dashboard - Lawyer Match AI</title>
     <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e6e6e6;
+            font-family: 'Inter', sans-serif;
+        }
+        h2, h4, h5 { color: #f5f5f5; }
+        .text-muted { color: #a3a3a3 !important; }
+        #sidebar-wrapper {
+            background: rgba(12, 12, 14, 0.95) !important;
+            border-right: 1px solid rgba(255,255,255,0.08) !important;
+        }
+        .sidebar-heading { color: #64b5ff !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
+        .list-group-item {
+            color: #c7c7c7 !important;
+            background: transparent !important;
+            border: none;
+            transition: all 0.3s;
+        }
+        .list-group-item:hover {
+            background-color: rgba(100,181,255,0.08) !important;
+            color: #64b5ff !important;
+        }
+        .list-group-item.active,
+        .list-group-item.active-modern {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+            color: white !important;
+        }
+        .customnav .nav-link, .customnav a.nav-link { color: #e6e6e6 !important; }
+        .glass-panel {
+            background: rgba(20, 20, 24, 0.85) !important;
+            border: 1px solid rgba(255,255,255,0.08) !important;
+        }
+        .table { color: #d4d4d4; }
+        .table-hover tbody tr:hover { background: rgba(255,255,255,0.04); }
+        .table thead th { color: #e5e7eb !important; border-color: rgba(255,255,255,0.08) !important; }
+        .table td, .table th { border-color: rgba(255,255,255,0.08); }
         .stats-card {
             border-radius: 15px;
             padding: 20px;
